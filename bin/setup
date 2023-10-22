@@ -29,12 +29,8 @@ if ! docker --version > /dev/null 2>&1; then
   error "Please, install ${bold}docker${normal} first!"
 fi
 
-if ! docker-compose --version > /dev/null 2>&1; then
-  error "Please, install ${bold}docker-compose${normal} first!"
-fi
-
 info "Building docker image..."
-docker-compose build
+docker build .
 success "Docker image built successfully!"
 
 echo ""
