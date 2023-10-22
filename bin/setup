@@ -30,7 +30,7 @@ if ! docker --version > /dev/null 2>&1; then
 fi
 
 info "Building docker image..."
-docker build .
+docker build -t cs .
 success "Docker image built successfully!"
 
 echo ""
